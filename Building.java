@@ -4,6 +4,12 @@ public class Building implements BuildingRequirements {
     protected String address = "<Address Unknown>";
     protected int nFloors = 1;
 
+    /**
+     * This is the constructor for a Building
+     * @param name is the name of the Building (e.g. Cutter for Cutter house)
+     * @param address is the address of the Building
+     * @param nFloors is the number of floors for the building
+     */
     public Building(String name, String address, int nFloors) {
         if (name != null) { this.name = name; }
         if (address != null) { this.address = address; } 
@@ -12,19 +18,28 @@ public class Building implements BuildingRequirements {
         }
         this.nFloors = nFloors;
     }
-
+    /**
+     * getter for the name of the Building
+     */
     public String getName() {
         return this.name;
     }
-
+     /**
+      * getter for the address of the building
+      */
     public String getAddress() {
         return this.address;
     }
 
+    /**
+     * getter for the number of floors of the building
+     */
     public int getFloors() {
         return this.nFloors;
     }
-
+    /**
+     * convert Building attributes to a string
+     */
     public String toString() {
         return this.name + " is a " + this.nFloors + "-story building located at " + this.address;
     }
